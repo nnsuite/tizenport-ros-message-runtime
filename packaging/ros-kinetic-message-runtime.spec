@@ -10,10 +10,10 @@ Source1001:     %{name}.manifest
 BuildRequires:  cmake
 BuildRequires:  gcc-c++
 BuildRequires:  ros-kinetic-catkin
-BuildRequires:  ros-kinetic-cpp-common
-BuildRequires:  ros-kinetic-roscpp-traits
-BuildRequires:  ros-kinetic-roscpp-serialization
-BuildRequires:  ros-kinetic-rostime
+Requires:  ros-kinetic-cpp-common
+Requires:  ros-kinetic-roscpp-traits
+Requires:  ros-kinetic-roscpp-serialization
+Requires:  ros-kinetic-rostime
 
 %define         ros_distro kinetic
 %define         ros_root /opt/ros
