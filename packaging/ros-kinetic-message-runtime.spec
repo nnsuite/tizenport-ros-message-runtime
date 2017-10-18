@@ -10,15 +10,10 @@ Source1001:     %{name}.manifest
 BuildRequires:  cmake
 BuildRequires:  gcc-c++
 BuildRequires:  ros-kinetic-catkin
-Requires:  ros-kinetic-cpp-common
-Requires:  ros-kinetic-roscpp-traits
-Requires:  ros-kinetic-roscpp-serialization
-Requires:  ros-kinetic-rostime
-
-%define         ros_distro kinetic
-%define         ros_root /opt/ros
-%define         install_path %{ros_root}/%{ros_distro}
-%define         src_name message-runtime
+Requires:       ros-kinetic-cpp-common
+Requires:       ros-kinetic-roscpp-traits
+Requires:       ros-kinetic-roscpp-serialization
+Requires:       ros-kinetic-rostime
 
 %description
 Package modeling the run-time dependencies for language bindings of messages.	
@@ -34,8 +29,8 @@ cp %{SOURCE1001} .
 if [ -f "/usr/setup.sh" ]; then . "/usr/setup.sh"; fi
 mkdir build && cd build
 cmake .. \
-        -DCMAKE_INSTALL_PREFIX="%{install_path}" \
-        -DCMAKE_PREFIX_PATH="%{install_path}" \
+        -DCMAKE_INSTALL_PREFIX="$CMAKE_PREFIX_PATH" \
+        -DCMAKE_PREFIX_PATH="$CMAKE_PREFIX_PATH" \
         -DSETUPTOOLS_DEB_LAYOUT=OFF \
         -DCATKIN_BUILD_BINARY_PACKAGE="1" \
 
