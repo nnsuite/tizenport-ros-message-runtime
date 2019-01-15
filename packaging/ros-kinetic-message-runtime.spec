@@ -4,7 +4,7 @@ Release:        0
 Summary:        ROS message-runtime package
 Group:          Development/Libraries
 License:        BSD
-URL:            http://wiki.ros.org/message_runtime  
+URL:            http://wiki.ros.org/message_runtime
 Source0:        %{name}-%{version}.tar.gz
 Source1001:     %{name}.manifest
 BuildRequires:  cmake
@@ -16,7 +16,7 @@ Requires:       ros-kinetic-roscpp-serialization
 Requires:       ros-kinetic-rostime
 
 %description
-Package modeling the run-time dependencies for language bindings of messages.	
+Package modeling the run-time dependencies for language bindings of messages.
 
 %prep
 %setup -q
